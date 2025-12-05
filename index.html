@@ -2,171 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Charlie Gottschalk | ML Blog & Portfolio</title>
+  <title>Charlie Gottschalk | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Dark, minimal ML blog and portfolio for Charlie Gottschalk." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="logo">CG</div>
+  <header class="header">
     <nav class="nav">
-      <a href="#blog">Blog</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="links.html">Links</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <p class="eyebrow">Machine Learning • Neural Networks • Data Science</p>
-      <h1>Hi, I'm Charlie.</h1>
-      <p class="hero-tagline">
-        I build neural network models and data-driven tools for real-world problems in housing, healthcare, and beyond.
-      </p>
-      <div class="hero-actions">
-        <a href="https://github.com/charchar1245" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-          View GitHub
-        </a>
-        <a href="https://github.com/charchar1245/Charlie_Gottschalk_Portfolio" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
-          ML Portfolio Repo
-        </a>
-      </div>
-    </section>
+    <h1 class="site-title">Charlie Gottschalk</h1>
 
-    <!-- BLOG SECTION -->
-    <section id="blog" class="section">
-      <div class="section-header">
-        <h2>Blog</h2>
-        <p class="section-subtitle">
-          Writing about neural networks, experiments, and what I'm learning along the way.
-        </p>
-      </div>
-
-      <div class="card-grid">
-        <!-- Blog Post Card 1 -->
-        <article class="card">
-          <div class="card-meta">
-            <span class="pill">Coming Soon</span>
-            <span class="card-date">2025</span>
-          </div>
-          <h3 class="card-title">Why I Built a Neural Network for Housing Prices</h3>
-          <p class="card-body">
-            A deep dive into my first end-to-end regression model: data preprocessing, network design, training curves,
-            and what I learned from optimizing for R² instead of just loss.
-          </p>
-          <a href="#" class="card-link">Read post (soon)</a>
-        </article>
-
-        <!-- Blog Post Card 2 -->
-        <article class="card">
-          <div class="card-meta">
-            <span class="pill">Coming Soon</span>
-            <span class="card-date">2025</span>
-          </div>
-          <h3 class="card-title">Tuning Recall in a Medical Classifier</h3>
-          <p class="card-body">
-            How I tuned a diabetes classifier with 100,000 patients, using techniques like pos_weight and dropout
-            to push recall higher while keeping precision reasonable.
-          </p>
-          <a href="#" class="card-link">Read post (soon)</a>
-        </article>
-
-        <!-- Blog Post Card 3 -->
-        <article class="card">
-          <div class="card-meta">
-            <span class="pill">Idea</span>
-            <span class="card-date">2025</span>
-          </div>
-          <h3 class="card-title">From Kaggle Datasets to Real-World Impact</h3>
-          <p class="card-body">
-            Thoughts on bridging the gap between competition datasets and practical decision support tools that
-            people actually use.
-          </p>
-          <a href="#" class="card-link">Read post (soon)</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-      <div class="section-header">
-        <h2>Projects</h2>
-        <p class="section-subtitle">
-          A snapshot of the machine learning projects I'm currently building and iterating on.
-        </p>
-      </div>
-
-      <div class="card-grid">
-        <!-- Housing Prices Predictor -->
-        <article class="card">
-          <div class="card-meta">
-            <span class="pill">Regression</span>
-          </div>
-          <h3 class="card-title">Housing Prices Predictor</h3>
-          <p class="card-body">
-            A PyTorch-based regression model that predicts house sale prices in USD using 81 engineered features from
-            the Kaggle "House Prices – Advanced Regression Techniques" dataset. Achieves an R² of 0.97 on test data.
-          </p>
-          <a href="https://github.com/charchar1245/Charlie_Gottschalk_Portfolio" class="card-link" target="_blank" rel="noopener noreferrer">
-            View in ML Portfolio
-          </a>
-        </article>
-
-        <!-- Diabetes Classification Model -->
-        <article class="card">
-          <div class="card-meta">
-            <span class="pill">Classification</span>
-          </div>
-          <h3 class="card-title">Diabetes Classification Model</h3>
-          <p class="card-body">
-            A neural network classifier trained on 100,000 patients with 9 clinical features to assist in diabetes
-            diagnosis. Uses dropout, pos_weight, and sigmoid outputs, reaching 60% precision, 89% recall, and a 70% F1 score.
-          </p>
-          <a href="https://github.com/charchar1245/Charlie_Gottschalk_Portfolio" class="card-link" target="_blank" rel="noopener noreferrer">
-            View in ML Portfolio
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-      <div class="section-header">
-        <h2>About</h2>
-      </div>
-      <div class="about-content">
-        <p>
-          I'm Charlie, a computer science student with a focus on machine learning and neural networks. I enjoy building
-          end-to-end projects that start in a Jupyter notebook and end as tools that can actually help people make decisions.
-        </p>
-        <p>
-          Recently, I've been working on models for housing price estimation and diabetes classification, and I'm
-          continually exploring better architectures, optimization strategies, and evaluation techniques.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-      <div class="section-header">
-        <h2>Links & Contact</h2>
-      </div>
-      <ul class="link-list">
-        <li><a href="https://www.linkedin.com/in/charlesgottschalkacc/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://github.com/charchar1245" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer">Blog (RSS or Substack – coming soon)</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer">Resume</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer">Kaggle</a></li>
-        <li><a href="mailto:your_email_here@example.com">Email</a></li>
-      </ul>
+    <section class="posts">
+      <h2 class="section-heading">Posts</h2>
+      <p class="empty">No posts yet.</p>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <span>© 2025 Charlie Gottschalk</span>
-  </footer>
 </body>
 </html>
