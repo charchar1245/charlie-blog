@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Sample Blog Post",
+    "description": "A demonstration of how blog posts look and how you will create new ones.",
+    "date": "January 15, 2025",
+    "tags": ["sample", "blog", "demo"],
+    "url": "posts/sample-post.html"
+  }
+]
