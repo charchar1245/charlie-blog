@@ -1,146 +1,58 @@
-/* ================================
-   GLOBAL THEME
-=================================== */
-
-:root {
-  --bg: #0a0a0d;
-  --panel: #131317;
-  --text: #f4f4f4;
-  --muted: #a3a3ad;
-  --border: rgba(255, 255, 255, 0.08);
-  --accent: #7f5dff;
-  --tag-bg: rgba(255, 255, 255, 0.06);
-  --radius: 14px;
-  --max-width: 760px;
-  --side-padding: 32px;
+"variant":"document",
+"id":"13102"
 }
-
 body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
+background-color: #0d0d0d;
+color: #e6e6e6;
+font-family: 'Segoe UI', Arial, sans-serif;
+margin: 0;
+padding: 0;
 }
 
-/* ================================
-   HEADER NAVIGATION
-=================================== */
-
-.header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px var(--side-padding);
+.article {
+max-width: 850px;
+margin: 40px auto;
+padding: 20px;
+line-height: 1.7;
 }
 
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 15px;
+h1, h2 {
+color: #ffffff;
+margin-top: 40px;
 }
 
-.nav a:hover {
-  color: var(--text);
+a {
+color: #4da6ff;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
 }
 
-/* ================================
-   PAGE STRUCTURE
-=================================== */
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--side-padding);
+.float-img {
+margin: 15px;
+max-width: 260px;
 }
 
-.site-title {
-  text-align: center;
-  font-size: 46px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  font-weight: 600;
+.float-img img {
+width: 100%;
+border-radius: 6px;
 }
 
-/* ================================
-   POST LISTING
-=================================== */
-
-.section-heading {
-  font-size: 22px;
-  margin-bottom: 16px;
+.float-img.right {
+float: right;
 }
 
-.posts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
+.float-img.left {
+float: left;
 }
 
-/* === Post Card === */
-
-.post-card {
-  display: block;
-  text-decoration: none;
-  padding: 26px;
-  border-radius: var(--radius);
-  background: var(--panel);
-  border: 1px solid var(--border);
-  transition: transform 0.15s ease, background 0.15s ease;
+p {
+font-size: 1.1rem;
 }
 
-.post-card:hover {
-  background: #191921;
-  transform: translateY(-2px);
-}
-
-.post-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.date {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.tag {
-  padding: 4px 10px;
-  font-size: 12px;
-  background: var(--tag-bg);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  color: var(--muted);
-}
-
-.post-title {
-  font-size: 22px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  color: var(--text);
-  margin: 6px 0 10px;
-}
-
-.post-desc {
-  color: var(--muted);
-  font-size: 15px;
-  margin-bottom: 14px;
-}
-
-.read-more {
-  font-size: 14px;
-  color: var(--accent);
-  opacity: 0.9;
-}
-
-.read-more:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.empty {
-  color: var(--muted);
-  margin-top: 20px;
+.clearfix::after {
+content: "";
+display: block;
+clear: both;
 }
