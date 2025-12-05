@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Charlie Gottschalk | Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,13 +15,52 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <h1 class="site-title">Charlie Gottschalk</h1>
 
-    <section class="posts">
+    <section class="posts-section">
       <h2 class="section-heading">Posts</h2>
-      <p class="empty">No posts yet.</p>
+      <div id="posts-container" class="posts-list">
+        <!-- Posts load automatically -->
+      </div>
     </section>
   </main>
+
+  <script>
+    async function loadPosts() {
+      const container = document.getElementById("posts-container");
+
+      try {
+        const response = await fetch("posts.json");
+        const posts = await response.json();
+
+        posts.forEach(post => {
+          const card = document.createElement("a");
+          card.href = post.url;
+          card.className = "post-card";
+
+          card.innerHTML = `
+            <div class="post-meta">
+              <span class="date">${post.date}</span>
+              ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+
+            <h3 class="post-title">${post.title}</h3>
+            <p class="post-desc">${post.description}</p>
+
+            <span class="read-more">Read more →</span>
+          `;
+
+          container.appendChild(card);
+        });
+
+      } catch (error) {
+        container.innerHTML = "<p class='empty'>No posts yet.</p>";
+      }
+    }
+
+    loadPosts();
+  </script>
+
 </body>
 </html>
