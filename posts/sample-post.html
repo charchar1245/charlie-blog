@@ -68,28 +68,25 @@
         flex-direction: row-reverse;
     }
 
-    /* Dual-image block (clean, even layout) */
     .media-dual {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 22px;
-        margin: 34px 0;
-        padding: 20px;
-        border-radius: 14px;
-        background: var(--panel);
-        border: 1px solid var(--border);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 34px 0;
+    padding: 20px;
+    border-radius: 14px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+}
 
-    .media-dual img {
-        width: 48%;
-        aspect-ratio: 16 / 9;
-        object-fit: cover;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        transition: opacity 0.2s;
-    }
-
+.media-dual img {
+    width: 45%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
     .media-dual img:hover {
         opacity: 0.85;
     }
