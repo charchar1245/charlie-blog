@@ -32,7 +32,7 @@
         color: #79b7ff !important;
     }
 
-    /* Flexible media block */
+    /* Standard media block */
     .media-block {
         display: flex;
         align-items: center;
@@ -46,6 +46,8 @@
 
     .media-block img {
         width: 250px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
         border-radius: 10px;
         border: 1px solid var(--border);
         flex-shrink: 0;
@@ -61,12 +63,16 @@
         flex: 1;
     }
 
-    /* Reverse layout */
-    .reverse { flex-direction: row-reverse; }
+    /* Reverse media layout */
+    .reverse {
+        flex-direction: row-reverse;
+    }
 
-    /* Dual-image wider block */
+    /* Dual-image block (clean, even layout) */
     .media-dual {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         gap: 22px;
         margin: 34px 0;
         padding: 20px;
@@ -76,7 +82,9 @@
     }
 
     .media-dual img {
-        width: 50%;
+        width: 48%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
         border-radius: 12px;
         border: 1px solid var(--border);
         transition: opacity 0.2s;
@@ -86,8 +94,10 @@
         opacity: 0.85;
     }
 
+    /* Mobile layout fixes */
     @media(max-width: 750px) {
-        .media-block, .reverse {
+        .media-block,
+        .reverse {
             flex-direction: column;
         }
         .media-dual {
@@ -98,6 +108,7 @@
         }
     }
 
+    /* Conclusion block */
     .conclusion {
         margin-top: 50px;
         padding: 22px;
@@ -121,48 +132,44 @@
 
 <h1>My First Steps Into Machine Learning</h1>
 
-<p><i>Note: all images throughout this post are clickable links to the videos that inspired each part of my journey.</i></p>
+<p><i>Note: all images in this post are clickable links to the videos that guided each part of my journey.</i></p>
 
 <p>
-Two weeks ago, my Algorithms professor suggested I explore machine learning and AI. Until then, 
-I only had a general idea of what these fields were—important, fast-growing, and extremely technical. 
+Two weeks ago, my Algorithms professor suggested I explore machine learning and AI. Until then, I
+only had a general idea of what these fields were—important, fast-growing, and extremely technical.
 Once I began learning, I quickly realized how much depth there was behind the buzzwords.
 </p>
 
-
-
 <!-- ====================================================== -->
-<!-- SECTION 1 — Andrew Ng (Clickable image on right)        -->
+<!-- SECTION 1 — Andrew Ng (Correct thumbnail)               -->
 <!-- ====================================================== -->
 
 <h2>Building Foundational Knowledge</h2>
 
 <div class="media-block reverse">
     <p>
-    My first real exposure came from Andrew Ng’s “Machine Learning Specialization,” which introduced 
-    fundamental concepts like gradient descent, cost functions, decision boundaries, and regularization. 
-    What stood out to me was how mathematical ideas became intuitive once explained well. It gave me the 
-    theoretical foundation I needed before touching any code.
+    My first real exposure came from Andrew Ng’s “Machine Learning Specialization,” which introduced
+    foundational concepts like gradient descent, cost functions, decision boundaries, and
+    regularization. What stood out to me was how mathematical ideas became intuitive once they were
+    explained clearly. It gave me the theoretical base I needed before touching any code.
     </p>
 
     <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">
-        <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="Andrew Ng ML">
+        <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="Andrew Ng ML Course">
     </a>
 </div>
 
-
-
 <!-- ====================================================== -->
-<!-- SECTION 2 — Coding Train + 3Blue1Brown (Large dual)     -->
+<!-- SECTION 2 — Dual-image block (fixed clean layout)       -->
 <!-- ====================================================== -->
 
 <h2>Understanding Neural Networks Visually</h2>
 
 <p>
-After grasping the core math, I needed intuition—something that would let me “see” what a neural 
-network is doing. Coding Train and 3Blue1Brown filled that gap perfectly. Their animated explanations 
-showed how activations move through layers, how weights shift during training, and how backpropagation 
-actually works.
+After grasping the core math, I needed intuition—something that would let me “see” what a neural
+network is doing. Coding Train and 3Blue1Brown filled that gap perfectly. Their animated explanations
+showed how activations move through layers, how weights shift during training, and how
+backpropagation actually works.
 </p>
 
 <div class="media-dual">
@@ -176,12 +183,10 @@ actually works.
 </div>
 
 <p>
-This stage transformed machine learning from an abstract topic into something I could mentally simulate.
-I understood not just *what* was happening, but *why*. That shift—gaining intuition rather than memorizing 
-steps—is what really pulled me in.
+This stage transformed machine learning from an abstract topic into something I could mentally
+simulate. I understood not just *what* was happening, but *why*. That shift—gaining intuition rather
+than memorizing steps—is what really pulled me in.
 </p>
-
-
 
 <!-- ====================================================== -->
 <!-- SECTION 3 — PyTorch + freeCodeCamp + MLP inspiration     -->
@@ -191,9 +196,9 @@ steps—is what really pulled me in.
 
 <div class="media-block">
     <p>
-    Moving into PyTorch was the turning point. I followed freeCodeCamp’s PyTorch course and learned how 
-    tensors work, how to build modules, how optimizers interact with gradients, and why shape mismatches 
-    break everything. Writing training loops by hand taught me what happens under the hood—nothing felt 
+    Moving into PyTorch was the turning point. I followed freeCodeCamp’s PyTorch course and learned how
+    tensors work, how to build modules, how optimizers interact with gradients, and why shape mismatches
+    break everything. Writing training loops by hand taught me what happens under the hood—nothing felt
     like a black box anymore.
     </p>
 
@@ -203,22 +208,20 @@ steps—is what really pulled me in.
 </div>
 
 <p>
-As I built my first multilayer perceptron (MLP), I learned practical lessons that every beginner 
-encounters: how the wrong learning rate can collapse training, why initialization matters, and what a 
-loss curve is actually telling you. Understanding these ideas deeply—not just copying code—made me feel 
-like I was truly *doing* machine learning.
+As I built my first multilayer perceptron (MLP), I learned practical lessons that every beginner
+encounters: how the wrong learning rate can collapse training, why initialization matters, and what a
+loss curve is actually telling you. Understanding these ideas deeply—not just copying code—made me
+feel like I was truly *doing* machine learning.
 </p>
 
 <p>
-But the moment that really inspired me was recreating a shallow neural network from scratch, watching 
-it learn in real time. That experience showed me that machine learning isn't magic—it’s engineering, 
+But the moment that really inspired me was recreating a shallow neural network from scratch, watching
+it learn in real time. That experience showed me that machine learning isn't magic—it’s engineering,
 mathematics, and iteration.
 </p>
 
-
-
 <!-- ====================================================== -->
-<!-- CONCLUSION — End of page                                -->
+<!-- CONCLUSION — Unchanged                                  -->
 <!-- ====================================================== -->
 
 <div class="conclusion">
