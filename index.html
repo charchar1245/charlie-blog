@@ -1,82 +1,71 @@
-<h1>My Machine Learning Journey</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charlie Gottschalk | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<!-- SECTION 1 -->
-<div class="float-img right">
-    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="Studying machine learning">
-</div>
+<body>
+  <!-- Top Navigation -->
+  <header class="header">
+    <nav class="nav">
+      <a href="about.html">About</a>
+      <a href="links.html">Links</a>
+    </nav>
+  </header>
 
-<p>
-    Two weeks ago, my Algorithms professor recommended that I explore the subject of Machine Learning and AI. 
-    I had no prior knowledge of the subject, other than knowing it was an emerging field in Computer Science. 
-    I decided I would give it a try, and I started with the basics: learning what a model really is, how data flows 
-    through a network, and how training actually works.
-</p>
+  <main class="container">
+    <!-- Blog Title -->
+    <h1 class="site-title">Charlie Gottschalk</h1>
 
-<p>
-    At the end of this first section, I want to highlight what really inspired me. It wasn’t just a concept or a 
-    definition—it was seeing an actual neural network train, in real time, using only PyTorch code. Watching it learn 
-    how to recognize images from scratch made something click for me. That was the moment I realized how powerful and 
-    intuitive machine learning could actually be.
-</p>
+    <!-- Post List Section -->
+    <section class="posts-section">
+      <h2 class="section-heading">Posts</h2>
 
-<!-- SECTION 2 -->
-<div class="float-img right">
-    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Housing price data visualization">
-</div>
+      <div id="posts-container" class="posts-list">
+        <!-- Blog posts load here from posts.json -->
+      </div>
+    </section>
+  </main>
 
-<p>
-    After getting comfortable with the fundamentals, I wanted to build something. My first project was a Housing Price 
-    Predictor. I wanted to understand regression, feature weights, normalization, and the entire cycle of training, testing, 
-    and evaluating performance. This project gave me hands-on experience with real numerical data.
-</p>
+  <!-- Automatic Post Loading Script -->
+  <script>
+    async function loadPosts() {
+      const container = document.getElementById("posts-container");
 
-<!-- SECTION 3 -->
-<h2>Understanding Neural Networks</h2>
+      try {
+        const response = await fetch("posts.json");
+        const posts = await response.json();
 
-<div class="float-img left">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Artificial_neural_network.svg" alt="Neural network diagram">
-</div>
+        posts.forEach(post => {
+          const card = document.createElement("a");
+          card.href = post.url;
+          card.className = "post-card";
 
-<p>
-    For my second project, I wanted to push myself further and explore classification. This led me to create a neural 
-    network that determines whether a patient has diabetes. It was fascinating to see the model learn patterns that 
-    humans could not easily see. 
-</p>
+          card.innerHTML = `
+            <div class="post-meta">
+              <span class="date">${post.date}</span>
+              ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
 
-<p>
-    The video that sparked this step in my journey was this one:  
-    <a href="https://www.youtube.com/watch?v=0BYECoI-v2c" target="_blank">Watch the PyTorch Training Video</a>.  
-    Seeing the network update its weights and gradually improve its predictions was what inspired me to keep going. 
-    It made neural networks feel alive.
-</p>
+            <h3 class="post-title">${post.title}</h3>
+            <p class="post-desc">${post.description}</p>
 
-<!-- NEW SECTION -->
-<h2>New Section</h2>
+            <span class="read-more">Read more →</span>
+          `;
 
-<div class="float-img right">
-    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80" alt="Learning resources">
-</div>
+          container.appendChild(card);
+        });
 
-<p>
-    To build an even stronger foundation, I began studying from freeCodeCamp’s machine learning resources. They broke down 
-    complex topics like backpropagation, gradient descent, and vectorized operations in a way that made everything click. 
-    Here is the link:  
-    <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp Machine Learning</a>.
-</p>
+      } catch (error) {
+        container.innerHTML = "<p class='empty'>No posts yet.</p>";
+      }
+    }
 
-<!-- CONCLUSION -->
-<h2>Conclusion</h2>
+    loadPosts();
+  </script>
 
-<p>
-    If you'd like to see my reports on these project in more detail, you can view my 
-    <a href="#">Housing Price Predictor</a> or my 
-    <a href="#">Diabetes Classifier</a>. 
-    The key take-away is this, by starting with small, focused projects you can have the building blocks of knowledge needed for larger, much cooler projects.
-</p>
-
-<p>
-    Stay tuned, <br>
-    Charlie Gottschalk <br>
-    <em>Written on December 5, 2025</em>
-</p>
-
+</body>
+</html>
