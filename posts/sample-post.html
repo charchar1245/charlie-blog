@@ -49,6 +49,11 @@
         border-radius: 10px;
         border: 1px solid var(--border);
         flex-shrink: 0;
+        transition: opacity 0.2s;
+    }
+
+    .media-block img:hover {
+        opacity: 0.85;
     }
 
     .media-block p {
@@ -74,17 +79,20 @@
         width: 50%;
         border-radius: 12px;
         border: 1px solid var(--border);
+        transition: opacity 0.2s;
+    }
+
+    .media-dual img:hover {
+        opacity: 0.85;
     }
 
     @media(max-width: 750px) {
         .media-block, .reverse {
             flex-direction: column;
         }
-
         .media-dual {
             flex-direction: column;
         }
-
         .media-dual img {
             width: 100%;
         }
@@ -113,93 +121,104 @@
 
 <h1>My First Steps Into Machine Learning</h1>
 
+<p><i>Note: all images throughout this post are clickable links to the videos that inspired each part of my journey.</i></p>
+
 <p>
-Two weeks ago, my Algorithms professor recommended that I explore machine learning and AI.
-Before that moment I had almost no experience — just a vague understanding that it was important,
-fast-growing, and deeply technical. But once I started learning, everything changed.
+Two weeks ago, my Algorithms professor suggested I explore machine learning and AI. Until then, 
+I only had a general idea of what these fields were—important, fast-growing, and extremely technical. 
+Once I began learning, I quickly realized how much depth there was behind the buzzwords.
 </p>
 
 
+
 <!-- ====================================================== -->
-<!-- SECTION 1 — Andrew Ng (image on right)                 -->
+<!-- SECTION 1 — Andrew Ng (Clickable image on right)        -->
 <!-- ====================================================== -->
 
 <h2>Building Foundational Knowledge</h2>
 
 <div class="media-block reverse">
     <p>
-    I began with Andrew Ng’s “Machine Learning Specialization.” His ability to break down complex
-    mathematical ideas into intuitive pieces made machine learning feel approachable. Concepts like
-    gradient descent, cost functions, decision boundaries, and overfitting stopped being abstract —
-    they finally made sense.
+    My first real exposure came from Andrew Ng’s “Machine Learning Specialization,” which introduced 
+    fundamental concepts like gradient descent, cost functions, decision boundaries, and regularization. 
+    What stood out to me was how mathematical ideas became intuitive once explained well. It gave me the 
+    theoretical foundation I needed before touching any code.
     </p>
 
-    <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="Andrew Ng ML">
+    <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">
+        <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="Andrew Ng ML">
+    </a>
 </div>
 
 
 
 <!-- ====================================================== -->
-<!-- SECTION 2 — Coding Train + 3Blue1Brown, big dual block -->
+<!-- SECTION 2 — Coding Train + 3Blue1Brown (Large dual)     -->
 <!-- ====================================================== -->
 
-<h2>Seeing Neural Networks Visually</h2>
+<h2>Understanding Neural Networks Visually</h2>
 
 <p>
-After the theory, I needed intuition. Coding Train and 3Blue1Brown provided exactly that — visual,
-animated explanations that showed what neural networks actually *do* under the hood.
+After grasping the core math, I needed intuition—something that would let me “see” what a neural 
+network is doing. Coding Train and 3Blue1Brown filled that gap perfectly. Their animated explanations 
+showed how activations move through layers, how weights shift during training, and how backpropagation 
+actually works.
 </p>
 
 <div class="media-dual">
-    <img src="https://i.ytimg.com/vi/ntKn5TPHHAk/hqdefault.jpg" alt="Coding Train">
-    <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="3Blue1Brown">
+    <a href="https://www.youtube.com/watch?v=ntKn5TPHHAk" target="_blank">
+        <img src="https://i.ytimg.com/vi/ntKn5TPHHAk/hqdefault.jpg" alt="Coding Train Neural Network">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">
+        <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="3Blue1Brown Neural Network">
+    </a>
 </div>
 
 <p>
-Watching activations move, weights adjust, and gradients cascade backward gave me a mental model
-that textbooks just don’t deliver. This was the point where machine learning stopped being a topic
-I was studying — it became something I *wanted* to build.
+This stage transformed machine learning from an abstract topic into something I could mentally simulate.
+I understood not just *what* was happening, but *why*. That shift—gaining intuition rather than memorizing 
+steps—is what really pulled me in.
 </p>
 
 
 
 <!-- ====================================================== -->
-<!-- SECTION 3 — PyTorch + freeCodeCamp + MLP video         -->
+<!-- SECTION 3 — PyTorch + freeCodeCamp + MLP inspiration     -->
 <!-- ====================================================== -->
 
 <h2>Learning PyTorch and Building My First Models</h2>
 
 <div class="media-block">
     <p>
-    Once I understood the concepts, I moved on to PyTorch — and this is where everything clicked.
-    I followed the freeCodeCamp PyTorch course, learning tensors, losses, optimizers, and training
-    loops. It was the first time I felt like I was building neural networks instead of just 
-    learning about them.
+    Moving into PyTorch was the turning point. I followed freeCodeCamp’s PyTorch course and learned how 
+    tensors work, how to build modules, how optimizers interact with gradients, and why shape mismatches 
+    break everything. Writing training loops by hand taught me what happens under the hood—nothing felt 
+    like a black box anymore.
     </p>
 
-    <img src="https://i.ytimg.com/vi/V_xro1bcAuA/hqdefault.jpg" alt="PyTorch MLP">
+    <a href="https://www.youtube.com/watch?v=V_xro1bcAuA" target="_blank">
+        <img src="https://i.ytimg.com/vi/V_xro1bcAuA/hqdefault.jpg" alt="PyTorch MLP Tutorial">
+    </a>
 </div>
 
 <p>
-Using PyTorch forced me to understand *why* things worked:  
-– why tensor shapes matter  
-– why the wrong learning rate causes collapse  
-– what the optimizer is actually doing  
-– how gradients, weights, and activations all interact  
-
-Writing models line-by-line — not just running tutorial code — made everything feel real.
+As I built my first multilayer perceptron (MLP), I learned practical lessons that every beginner 
+encounters: how the wrong learning rate can collapse training, why initialization matters, and what a 
+loss curve is actually telling you. Understanding these ideas deeply—not just copying code—made me feel 
+like I was truly *doing* machine learning.
 </p>
 
 <p>
-But the moment that fully inspired me was when I watched a breakdown of a shallow neural network
-and then recreated it myself. Seeing it train, predict, fail, and improve unlocked something in me:
-I realized that machine learning isn't magic — it's engineering.
+But the moment that really inspired me was recreating a shallow neural network from scratch, watching 
+it learn in real time. That experience showed me that machine learning isn't magic—it’s engineering, 
+mathematics, and iteration.
 </p>
 
 
 
 <!-- ====================================================== -->
-<!-- CONCLUSION — End of page                               -->
+<!-- CONCLUSION — End of page                                -->
 <!-- ====================================================== -->
 
 <div class="conclusion">
@@ -207,7 +226,7 @@ I realized that machine learning isn't magic — it's engineering.
     I have detailed reports of the projects on my GitHub page for both my 
     <a href="#" target="_blank">Housing Prices Predictor</a> 
     and my 
-    <a href="#" target="_blank">Diabetes Classification Model</a>.
+    <a href="#" target="_blank">Diabetes Classification Model</a>. 
     The key take-away is this: by starting with small, focused projects you can set building blocks for larger, cooler ones.
     </p>
 
