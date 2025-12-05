@@ -3,136 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <title>My First Steps Into Machine Learning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../style.css">
 
 <style>
     body {
-        background: #121212;
-        color: #e5e5e5;
-        font-family: Arial, sans-serif;
-        max-width: 850px;
+        max-width: 820px;
         margin: 40px auto;
+        padding: 0 24px;
         line-height: 1.7;
-        padding: 0 20px;
+        color: var(--text);
+        background: var(--bg);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     h1, h2 {
         font-weight: 600;
-        color: #ffffff;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
     }
 
     p {
         margin-bottom: 18px;
+        color: var(--muted);
     }
 
-    a { color: #9bc3ff; }
-
-    /* Clean, organized image/text block */
+    /* Flexible media block (your sketch) */
     .media-block {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 24px;
-        margin: 32px 0;
+        gap: 22px;
+        margin: 34px 0;
+        padding: 18px;
+        border-radius: 14px;
+        background: var(--panel);
+        border: 1px solid var(--border);
     }
 
     .media-block img {
-        width: 260px;
-        border-radius: 12px;
-        border: 1px solid #333;
+        width: 250px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
         flex-shrink: 0;
     }
 
     .media-block p {
         margin: 0;
         flex: 1;
+        color: var(--muted);
     }
 
-    /* Stacks nicely on mobile */
-    @media (max-width: 700px) {
-        .media-block {
-            flex-direction: column;
-            text-align: left;
-        }
+    /* Alternate left/right layout */
+    .reverse {
+        flex-direction: row-reverse;
+    }
 
+    /* Mobile stacking */
+    @media(max-width: 700px) {
+        .media-block,
+        .reverse {
+            flex-direction: column;
+        }
         .media-block img {
             width: 100%;
         }
     }
+
+    /* Conclusion styling */
+    .conclusion {
+        margin-top: 50px;
+        padding: 22px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+    }
 </style>
+
 </head>
 
 <body>
 
+<header class="header">
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../links.html">Links</a>
+    </nav>
+</header>
+
 <h1>My First Steps Into Machine Learning</h1>
 
 <p>
-Two weeks ago, my Algorithms professor recommended that I explore Machine Learning and AI. 
-Before that moment, I had almost no experience with the field — I just knew it was important 
-and rapidly growing. I decided to give it a try, mostly out of curiosity about how tools like 
-ChatGPT perform so intelligently. That curiosity quickly turned into genuine interest.
+Two weeks ago, my Algorithms professor recommended that I explore machine learning and AI.
+Before that moment I had almost no experience — I just knew it was important and rapidly
+growing. That initial curiosity quickly turned into genuine interest as I began to understand
+how these models actually learn.
 </p>
 
+<!-- ========================= -->
+<!-- SECTION 1 (Text + Right Image) -->
+<!-- ========================= -->
+<h2>Building Foundational Knowledge</h2>
 
-<h2>Building Fundamental Knowledge</h2>
-
-<div class="media-block">
+<div class="media-block reverse">
     <p>
-    I started with Andrew Ng’s “Machine Learning Specialization,” which introduced the core 
-    ideas of the field — linear and logistic regression, gradient descent, and the foundations 
-    of classification. His teaching style makes the concepts feel intuitive, even if you're new.
+    I started with Andrew Ng’s "Machine Learning Specialization," where I learned the basics:
+    regression, gradient descent, classification, and the foundations behind training a model.
+    His explanations made difficult concepts surprisingly intuitive.
     </p>
-    <img src="https://i.ytimg.com/vi/vStJoetOxJg/hqdefault.jpg">
-</div>
 
-<div class="media-block">
-    <p>
-    I also watched Coding Train’s perceptron series and 3Blue1Brown’s neural network explanation. 
-    These videos emphasize intuition and visuals, and they helped connect the theoretical pieces 
-    together in a way that made everything finally “click.”
-    </p>
-    <img src="https://i.ytimg.com/vi/ntKn5TPHHAk/hqdefault.jpg">
-</div>
-
-<div class="media-block">
-    <p>
-    The moment I became truly invested was when I followed the Coding Train tutorial and built a 
-    simple neural network myself. Watching it actually learn — not just seeing the math on paper — 
-    made the subject feel alive and incredibly compelling.
-    </p>
-    <img src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg">
+    <img src="https://i.ytimg.com/vi/0BYECoI-v2c/hqdefault.jpg" alt="ML video">
 </div>
 
 
-<h2>Using PyTorch and Building My First Projects</h2>
+<!-- ========================= -->
+<!-- SECTION 2 (Text + Left Image) -->
+<!-- ========================= -->
+<h2>Visual Intuition & Neural Networks</h2>
 
 <div class="media-block">
     <p>
-    After learning the fundamentals, I wanted to build real projects. That meant learning PyTorch, 
-    which was challenging at first. Unlike simple tutorial examples, real ML coding requires 
-    understanding tensor shapes, losses, optimizers, model architectures, and how everything 
-    interacts during training.
+    The visual explanations from Coding Train and 3Blue1Brown helped me understand neural networks
+    on an intuitive level. Seeing activations, weights, and decision boundaries change during
+    training made everything feel *alive*. This was the point where machine learning stopped being
+    abstract and started becoming something I genuinely enjoyed exploring.
     </p>
-    <img src="https://i.ytimg.com/vi/V_xro1bcAuA/hqdefault.jpg">
+
+    <img src="https://i.ytimg.com/vi/ntKn5TPHHAk/hqdefault.jpg" alt="Neural network visualization">
+</div>
+
+<!-- ========================= -->
+<!-- CONCLUSION GOES HERE (as requested) -->
+<!-- ========================= -->
+<div class="conclusion">
+    <p>
+    I have detailed reports of the projects on my GitHub page for both my 
+    <a href="#" target="_blank">Housing Prices Predictor</a> 
+    and my 
+    <a href="#" target="_blank">Diabetes Classification Model</a>.
+    The key take-away is this: by starting with small, focused projects you can set building blocks for larger, cooler ones.
+    </p>
+
+    <p>
+    Stay tuned.<br>
+    Charlie Gottschalk
+    </p>
+
+    <p><i>Written on December 5, 2025</i></p>
+</div>
+
+
+<!-- ========================= -->
+<!-- NEW SECTION (Text + Right Image) -->
+<!-- ========================= -->
+<h2>A New Section</h2>
+
+<div class="media-block reverse">
+    <p>
+    As I progressed further, I began exploring PyTorch seriously — learning tensors, shaping data,
+    debugging layers, testing optimizers, and designing my own models from scratch. This was where
+    machine learning stopped being "learning" and started becoming "building."
+    </p>
+
+    <img src="https://i.ytimg.com/vi/V_xro1bcAuA/hqdefault.jpg" alt="PyTorch learning">
 </div>
 
 <p>
-I began with freeCodeCamp’s PyTorch course, which gave me enough structure to get started. Once I moved into 
-Google Colab and began making my own models, things became more demanding — in a good way. I had to constantly 
-look up documentation, read about different layers, debug shape mismatches, and use AI tools to understand exactly 
-what each operation was doing under the hood.
-</p>
-
-<p>
-I wasn’t just trying to write code that “worked” — I wanted to understand every line. Why does this reshape matter? 
-What exactly is this loss function measuring? Why does training collapse if you choose the wrong learning rate? 
-Those questions forced me to explore much deeper than the surface level.
-</p>
-
-<p>
-By the time I finished my two projects, I realized something important: you don’t memorize PyTorch — you learn 
-how to navigate it. You learn how to explore, experiment, and troubleshoot in a way that makes you a better 
-machine learning developer overall.
+Every mistake taught me something. Every small success — even a tiny bump in accuracy — kept me going.
+Machine learning is a field where curiosity compounds… and it becomes very addictive.
 </p>
 
 </body>
