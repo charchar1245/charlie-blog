@@ -24,31 +24,20 @@
         color: #9bc3ff;
     }
 
-    /* Thumbnail floating style */
+    /* Floating thumbnail with article-style wrapping */
     .thumb {
         float: right;
-        width: 160px;
-        margin: 10px;
-        margin-left: 20px;
-        border-radius: 10px;
+        width: 180px;
+        border-radius: 12px;
+        margin: 5px 0 10px 18px; /* top right bottom left */
         border: 1px solid #333;
-    }
-
-    .thumb-container {
-        display: inline-block;
-        width: 160px;
-    }
-
-    img {
-        width: 100%;
-        border-radius: 10px;
     }
 
     p {
         margin-bottom: 18px;
     }
 
-    /* Clear floats between sections */
+    /* Ensures sections don't collide with previous floats */
     .clear {
         clear: both;
     }
@@ -61,90 +50,71 @@
 
 <p>
 Two weeks ago, my Algorithms professor suggested that I take a look into Machine Learning and AI. 
-Before that moment, my knowledge of the field was basically zero — I just knew it was a rapidly growing 
-area of computer science. I figured it couldn’t hurt to try it out, and I had always been curious how 
-applications like ChatGPT could behave so intelligently. That curiosity ended up pulling me in far deeper 
-than I expected.
+Before that moment, my experience with the field was basically nonexistent — I only knew it was an 
+exciting and fast-growing area of computer science. I decided to try it out, mostly out of curiosity 
+about how tools like ChatGPT could behave so intelligently. That curiosity quickly pulled me in.
 </p>
+
 
 <h2>Building Fundamental Knowledge</h2>
 
-<div class="thumb-container">
-    <a href="https://www.youtube.com/watch?v=vStJoetOxJg&list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI" target="_blank">
-        <img class="thumb" src="https://i.ytimg.com/vi/vStJoetOxJg/hqdefault.jpg" alt="Andrew Ng Thumbnail">
-    </a>
-</div>
+<img class="thumb" src="https://i.ytimg.com/vi/vStJoetOxJg/hqdefault.jpg">
 
 <p>
-I started with Andrew Ng’s “Machine Learning Specialization,” which helped me understand the building blocks 
-of the entire field — things like regression, gradient descent, and the foundations of classification. 
-The way he teaches makes the ideas feel approachable, even if they're brand new.
+I started with Andrew Ng’s “Machine Learning Specialization,” which helped me understand the building 
+blocks of the field — linear regression, logistic regression, gradient descent, and the foundations of 
+classification. The way he teaches makes the ideas feel approachable, even if they're brand new.
 </p>
 
-<div class="thumb-container">
-    <a href="https://www.youtube.com/watch?v=ntKn5TPHHAk&t=677s" target="_blank">
-        <img class="thumb" src="https://i.ytimg.com/vi/ntKn5TPHHAk/hqdefault.jpg" alt="Coding Train Thumbnail">
-    </a>
-</div>
+<img class="thumb" src="https://i.ytimg.com/vi/ntKn5TPHHAk/hqdefault.jpg">
 
 <p>
-I also watched Coding Train’s perceptron series and 3Blue1Brown’s neural network explanation. 
-Both focused more on intuition and theory, and that combination of visuals and math helped everything 
-start to “click.”
+I also watched Coding Train’s perceptron series and 3Blue1Brown’s neural network explanation. Both videos 
+focus heavily on intuition and theory, and the combination of visuals and math made everything start to “click.”
 </p>
 
-<div class="thumb-container">
-    <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">
-        <img class="thumb" src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg" alt="3Blue1Brown Thumbnail">
-    </a>
-</div>
+<img class="thumb" src="https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg">
 
 <p>
-The moment that hooked me was recreating the simple neural network from Coding Train’s video and watching it 
-actually learn. Seeing a model improve without being explicitly programmed to do so felt almost surreal — 
-like watching a simple idea suddenly come alive.
+The moment I truly became interested was when I built the simple neural network from Coding Train’s video 
+and watched it improve on its own. Seeing a model learn firsthand — not just in theory — made the subject feel alive.
 </p>
 
 <div class="clear"></div>
 
+
 <h2>Using PyTorch and Building My First Projects</h2>
 
-<div class="thumb-container">
-    <a href="https://www.youtube.com/watch?v=V_xro1bcAuA" target="_blank">
-        <img class="thumb" src="https://i.ytimg.com/vi/V_xro1bcAuA/hqdefault.jpg" alt="freeCodeCamp PyTorch Thumbnail">
-    </a>
-</div>
+<img class="thumb" src="https://i.ytimg.com/vi/V_xro1bcAuA/hqdefault.jpg">
 
 <p>
-After getting comfortable with the fundamentals, I wanted to build something real — which meant learning PyTorch.
-At first, PyTorch felt overwhelming. It’s powerful, but that also means you run into situations where the code 
-doesn’t work unless you understand what’s happening underneath: tensor shapes, autograd, loss functions, model 
-architectures, optimizers, all of it.
+After the fundamentals, I wanted to start building real projects. That meant learning PyTorch — a powerful 
+but initially overwhelming library. Unlike the neatly packaged examples in videos, real ML development requires 
+understanding tensor shapes, layers, optimizers, loss functions, and how all the pieces fit together.
 </p>
 
 <p>
-I started with freeCodeCamp’s PyTorch course, which gave me a structured foundation. Once I moved to Google Colab 
-and began writing my own models, things got much more challenging — and way more interesting. I had to constantly 
-read documentation, search through GitHub issues, look up unfamiliar functions, and debug errors that made no sense 
-at first glance.
+I began with freeCodeCamp’s PyTorch course, which gave me the structure I needed to start experimenting. 
+Once I moved to Google Colab and began writing my own models, I had to dig much deeper. I was constantly 
+reading documentation, searching GitHub issues, and asking AI tools to explain why certain operations behaved 
+the way they did.
 </p>
 
 <p>
-AI assistants helped a lot too, especially when I didn’t understand why a certain operation behaved the way it did. 
-But even with help, the learning came from struggling with the code, breaking it, fixing it, and slowly building an 
-intuition for how PyTorch actually works.
+I wasn’t just copying code — I was trying to understand every line. Why does this dimension need to match that one? 
+What does this loss function actually measure? Why does everything break when you reshape a tensor incorrectly? 
+That process of breaking things, fixing them, and experimenting is what taught me the most.
 </p>
 
 <p>
-By the time I finished my first two ML projects, I realized something: you never “memorize” PyTorch. You learn how 
-to navigate it. You learn how to look up the right things, how to reason about your model, and how to interpret 
-errors instead of being intimidated by them. That skill — the ability to explore and experiment — is what made the 
-whole experience so rewarding.
+By the time I completed my first two projects, I realized something important: you don’t “memorize” PyTorch — 
+you learn how to navigate it. You learn how to look up the right things, reason about your model’s behavior, 
+and interpret errors without getting discouraged. That skill alone made the entire experience incredibly rewarding.
 </p>
 
 <p>
-This is just the beginning, but it’s already made me excited to keep going deeper into machine learning, both 
-the theory and the engineering side of it.
+These first steps were challenging, but they made me genuinely excited to go deeper into both the theoretical 
+and practical sides of machine learning.
 </p>
 
 <div class="clear"></div>
