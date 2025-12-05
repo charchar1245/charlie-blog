@@ -1,9 +1,9 @@
 [
   {
-    "title": "Sample Blog Post",
-    "description": "A demonstration of how blog posts look and how you will create new ones.",
-    "date": "January 15, 2025",
-    "tags": ["sample", "blog", "demo"],
+    "title": "Machine Learning from Zero to Hero",
+    "description": "How I went from no knowledge of Machine Learning to making my own neural networks",
+    "date": "December 4, 2025",
+    "tags": ["Educational", "Neural Networks", "Machine Learning"],
     "url": "posts/sample-post.html"
   }
 ]
